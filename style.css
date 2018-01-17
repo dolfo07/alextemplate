@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai|Mogra|Rakkas');
+/* CSS Document */
+
+/*Universal Styles*/
+
+html,
+body {
+    max-width: 100%;
+    font-family: 'Arima Madurai', cursive;
+    font-family: 'Mogra', cursive;
+    font-family: 'Rakkas', cursive;
+    overflow-x: hidden;
+    font-size: 1.15em;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: table;
+    margin: 0;
+    max-width: none;
+}
+
+.font {
+    font-weight: 600;
+}
+
+
+/*------------------------Hidden/display Navigation bar Styles-------------------------*/
+
+/* hidden fixed navigation */
+
+/* Smalls Devices */
+
+@media screen and (max-width: 766px) {
+    .navbar {
+        background-color: #154360;
+    }
+    .navbar ul {
+        background-color: rgb(226, 222, 222);
+    }
+    #nav {
+        display: none;
+    }
+    #nav ul li a {
+        display: block;
+        color: white;
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    #about:before {
+        display: block;
+        content: " ";
+        height: 90px;
+        visibility: hidden;
+    }
+    #portfolio:before {
+        display: block;
+        content: " ";
+        height: 100px;
+        visibility: hidden;
+    }
+    #skills:before {
+        display: block;
+        content: " ";
+        height: 80px;
+        visibility: hidden;
+    }
+    .about h1,
+    .portfolio h1,
+    .skills h1 {
+        color: #154360;
+        font-size: 4em
+    }
+    .about h2,
+    .portfolio h2 {
+        color: #212F3C;
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-decoration-color: #2471A3;
+    }
+    .about hr {
+        background-color: #154360;
+        height: 1px;
+        border: 2px;
+        border-style: groove;
+    }
+}
+
+/* Large Devices */
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        background-color: #2471A3;
+    }
+    .navbar ul {
+        background-color: transparent;
+    }
+    #nav {
+        display: none;
+    }
+    #nav ul li a {
+        background-color: transparent;
+        color: white;
+    }
+    /*The below will not allow the navbar to cut part of the section when scroll jumping*/
+    #about:before {
+        display: block;
+        content: " ";
+        height: 50px;
+        visibility: hidden;
+    }
+    #portfolio:before {
+        display: block;
+        content: " ";
+        margin-top: -75px;
+        height: 110px;
+        visibility: hidden;
+    }
+    #skills {
+        margin-top: 100px;
+    }
+    #skills:before {
+        display: block;
+        content: " ";
+        margin-top: -25px;
+        height: 90px;
+        visibility: hidden;
+    }
+    .about h1,
+    .portfolio h1,
+    .skills h1 {
+        color: #2471A3;
+        font-size: 4em
+    }
+    .about h2,
+    .portfolio h2 {
+        color: #212F3C;
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-decoration-color: #2471A3;
+    }
+    .about hr {
+        background-color: #2471A3;
+        height: 1px;
+        border: 2px;
+        border-style: groove;
+    }
+}
+
+/*Navigation Card Styles*/
+
+/*#navigation and #heading1 go together*/
+
+#navigation {
+    margin: 30vh 0 20vh 0;
+}
+
+#heading1 {
+    top: 100px;
+}
+
+/*Index*/
+
+.well,
+a {
+    background-color: rgba(39, 38, 38, 0.37);
+    color: white;
+}
+
+.up-hover:hover {
+    top: -5px;
+    box-shadow: 15px 15px 15px #777;
+}
+
+.up-hover:hover a {
+    color: black;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    background: fixed url(image/bckgrnd.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/*//////////About//////////*/
+
+.about {
+    height: 100%;
+    background: linear-gradient( rgba(242, 243, 244, 0.4),
+    rgba(248, 249, 249, 0.45)), url("image/pencil.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #2e4053;
+    padding-bottom: 20px;
+}
+
+.about p {
+    font-size: 1em;
+}
+
+.profile-img {
+    border-radius: 100px;
+    max-width: 150px;
+}
+
+.jumbotron {
+    background: transparent;
+}
+
+/*Portfolio Styles*/
+
+.portfolio {
+    background: linear-gradient( rgba(242, 243, 244, 0.4),
+    rgba(248, 249, 249, 0.45)), url("image/Pencil-Portfolio.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 180px;
+}
+
+.portfolio figure {
+    background-color: transparent;
+}
+
+.portfolio figure figcaption {
+    font-size: .75em;
+}
+
+.portfolio-item:hover {
+    transition: 0.5s;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
+}
+
+
+.portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 25px;
+}
+
+.portfolio-item .portfolio-caption h4 {
+    color: #fff;
+    text-transform: none;
+    margin: 0;
+}
+
+/*skillls*/
+
+.skills {
+    background-color: #F4F6F7;
+    height: 100%;
+    padding-bottom: 250px;
+}
+
+#skills {
+    margin-top: 0;
+}
+
+
+.skills img {
+    max-width: 250px;
+}
+
+.skills figure {
+    max-width: 300px;
+    border: thin silver solid;
+    margin: 0.1em;
+    padding: 0.5em;
+    background-color: rgb(236, 240, 241);
+}
+
+.shine {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/**
+ * The "shine" element
+ */
+
+.shine:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(230, 227, 227, 0.17);
+    background: linear-gradient( to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%);
+}
+
+/* Hover state - trigger effect */
+
+.shine:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+/* Active state */
+
+.shine:active:after {
+    opacity: 0;
+}
+
+/*Contact Styles*/
+
+.contact {
+    background-image: url("image/contact1.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 200px 0;
+}
+
+#contact {
+    color: grey;
+    font-weight: 500;
+    background-color: #d4e2f9;
+    height: 1px;
+}
+
+#contact h1 {
+    color: white;
+}
+
+#contact a:visited {
+    color: pink;
+}
